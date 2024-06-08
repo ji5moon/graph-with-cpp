@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+using namespace std;
+vector <float>v;
+int main(){
+    int n;
+    cout << "식의 차수 입력:";
+    cin >> n;
+    cout << "내림차순으로 정렬했을때의 계수를 차례대로 입력";
+    for (int i = 0; i<=n; i++){
+        int u;
+        cin >> u;
+        v.push_back(u);
+    }
+    for (float i = 20; i>= -20; i-=0.5){
+        for (float j = -20; j<=20; j+=0.5){
+            float var = 0;
+            for (int k = 0; k<=n; k++){
+                var += v[k]*pow(j,n-k);
+            }
+            if (var == i){
+                cout << ".";
+            }else if(i==0 && j==0){
+                cout << "┼";
+            }else if (i == 0){
+                cout << "─";
+            }else if(j == 0){
+                cout << "│";
+            }else{
+                cout << " ";
+            }
+        }
+        cout << '\n';
+    }
+}
+
+
+
