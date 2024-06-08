@@ -1,0 +1,1 @@
+Before drawing the graph, change the formula for drawing the graph to implicit function type and sort in descending order. Next, enter the degree of the equation you want to draw and enter the coefficients of the terms in order from the highest degree to the lowest degree.
